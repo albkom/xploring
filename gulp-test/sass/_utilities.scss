@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+/* Utilities partial */
+.pad-s {
+    padding: $pad-s;
+}
+.pad-m {
+    padding: $pad-m;
+}
+.pad-l {
+    padding: $pad-l;
+}
+.gap-s {
+    gap: $pad-s;
+}
+.gap-m {
+    gap: $pad-m;
+}
+.gap-l {
+    gap: $pad-l;
+}

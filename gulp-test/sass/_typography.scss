@@ -1,0 +1,58 @@
+// 100 	Thin (Hairline)
+// 200 	Extra Light (Ultra Light)
+// 300 	Light
+// 400 	Normal (Regular)
+// 500 	Medium
+// 600 	Semi Bold (Demi Bold)
+// 700 	Bold
+// 800 	Extra Bold (Ultra Bold)
+// 900 	Black (Heavy)
+
+.font-thin {
+	font-weight: 100;
+}
+.font-light {
+    font-weight: 200;
+}
+.font-regular {
+    font-weight: 400;
+}
+.font-bold {
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Thin.ttf") format("truetype");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: 200; // Approximation for Extra Light
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 500; // Approximation for Medium
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 600; // Approximation for Semi Bold
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+}

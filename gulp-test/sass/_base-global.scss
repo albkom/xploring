@@ -1,0 +1,11 @@
+@use './mixins' as mixins;
+
+/* Global styles */
+html {
+  @include mixins.fullScreen;
+  background-color: red !important;
+}
+body {
+  @include mixins.fillContainer;
+  background-color: white !important;
+}

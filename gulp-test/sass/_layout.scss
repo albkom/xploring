@@ -1,0 +1,8 @@
+@use "mixins" as mixins;
+/* Layout partial */
+.col {
+  @include mixins.flex(column);
+}
+.row {
+  @include mixins.flex(row);
+}
