@@ -1,0 +1,24 @@
+@keyframes border-gradient {
+  0% {
+    border-image-source: linear-gradient(
+      to left,
+      var(--card-color),
+      var(--card-alt)
+    );
+  }
+  50% {
+    border-image-source: linear-gradient(
+      to left,
+      var(--card-alt),
+      var(--card-color)
+    );
+  }
+  100% {
+    border-image-source: linear-gradient(
+      to left,
+      var(--card-color),
+      var(--card-alt)
+    );
+  }
+}
+

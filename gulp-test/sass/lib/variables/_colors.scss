@@ -1,0 +1,61 @@
+/* Colors partial */
+
+// COLORS
+$background: #100710 !default;
+$text: #ffffff !default;
+$primary: #00c2b3 !default;
+$highlight: #ff00ff !default;
+$danger: #c47ae6 !default;
+
+$error: #ff0000 !default;
+$warning: #ffff00 !default;
+$success: #00ff00 !default;
+
+// SHADES AND TINTS
+// For dark mode (-1 is Shade, +1 is Tint)
+// For light mode, invert the values (e.g., -1 becomes +1 and vice versa)
+$primary-1: #008b7e !default;
+$primary-2: #39fcea !default;
+$background-1: #140914 !default;
+$background-2: #2d132d !default;
+$text-1: #f2f2f2 !default;
+$text-2: #e6e6e6 !default;
+$highlight-1: #ff66ff !default;
+$highlight-2: #ff99ff !default;
+$danger-1: #8d0074 !default;
+$danger-2: #ffe5ff !default;
+$error-1: #ff4d4d !default;
+$error-2: #ff8080 !default;
+$warning-1: #ffff66 !default;
+$warning-2: #ffff99 !default;
+$success-1: #4dff4d !default;
+$success-2: #80ff80 !default;
+
+// Map of all colors for easy access
+$colors: (
+  background: $background,
+  text: $text,
+  primary: $primary,
+  highlight: $highlight,
+  danger: $danger,
+  success: $success,
+  warning: $warning,
+  error: $error,
+  // Shades and tints
+  background-1: $background-1,
+  background-2: $background-2,
+  text-1: $text-1,
+  text-2: $text-2,
+  primary-1: $primary-1,
+  primary-2: $primary-2,
+  highlight-1: $highlight-1,
+  highlight-2: $highlight-2,
+  danger-1: $danger-1,
+  danger-2: $danger-2,
+  error-1: $error-1,
+  error-2: $error-2,
+  warning-1: $warning-1,
+  warning-2: $warning-2,
+  success-1: $success-1,
+  success-2: $success-2,
+);

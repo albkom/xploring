@@ -1,0 +1,27 @@
+@use "../variables/variables" as *;
+@use "../variables/colors" as *;
+@use "sass:color";
+
+// CARDS
+.card {
+  border-radius: $border-radius-m;
+  padding: $pad-l;
+  //   border: 2px solid $text;
+  border-width: $border-width-m;
+  border-style: solid;
+  overflow: hidden;
+
+  background-color: $background-1;
+}
+
+
+@each $color-name, $color-value in $colors {
+  .card.#{$color-name} {
+    --card-color: #{$color-value};
+    --card-alt: #{$primary-1};
+    // @include border-gradient($color-value, $primary-1, 5s);
+  }
+  .card.#{$color-name}.active {
+    // @include animation-rotating-gradient($color-value, $highlight, 5s);
+  }
+}

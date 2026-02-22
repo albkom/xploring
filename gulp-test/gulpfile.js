@@ -9,6 +9,7 @@
 const { series } = require('gulp');
 const { src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const rename = require('gulp-rename')
 
 // The `clean` function is not exported so it can be considered a private task.
 // It can still be used within the `series()` composition.
@@ -26,12 +27,13 @@ function build(cb) {
 
 function buildStyles() {
     return src('sass/**/*.scss')
-        .pipe(sass())
-        .pipe(dest('public/css'))
+      .pipe(sass())
+      .pipe(rename('index.css'))
+      .pipe(dest('public/css'));
 }
 
 function watchTask() {
-    watch(['sass/**/*.scss'], buildStyles);
+    watch(['sass/**/*.scss', 'public/**/*.html'], buildStyles);
 }
 
 exports.build = build;

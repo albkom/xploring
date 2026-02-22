@@ -1,0 +1,51 @@
+@use 'sass:color';
+@use "../lib/variables/variables" as *;
+@use "../lib/variables/colors" as *;
+@use '../lib/base/mixins' as *;
+
+// ACTIONS
+.action {
+  @include backgroundTransparent($primary-1, 0.1);
+  @include textShadow($primary, 0.2em);
+  @include boxShadow($primary, 0.05em);
+  color: $primary;
+  font-weight: 100;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.action.danger {
+  @include backgroundTransparent($danger-1, 0.1);
+  @include textShadow($danger, 0.2em);
+  @include boxShadow($danger, 0.1em);
+  color: $danger;
+}
+
+// Effects
+.action:hover {
+  @include boxShadow($primary, 0.1em);
+  //   background-color: $primary-1;
+}
+.action:focus,
+.action:active {
+  @include boxShadow($primary, 0.15em);
+}
+.action.danger:hover {
+  @include boxShadow($danger, 0.1em);
+}
+.action.danger:focus,
+.action.danger:active {
+  @include boxShadow($danger, 0.15em);
+}
+
+// CARDS
+@each $color-name, $color-value in $colors {
+  .card.#{$color-name} {
+    --card-color: #{$color-value};
+    --card-alt: #{$primary-1};
+    @include border-gradient($color-value, $primary-1, 5s);
+  }
+  .card.#{$color-name}.active {
+    @include animation-rotating-gradient($color-value, $highlight, 5s);
+  }
+}

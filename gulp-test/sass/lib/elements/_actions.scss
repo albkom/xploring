@@ -1,0 +1,38 @@
+@use "../variables/variables" as *;
+@use "../variables/colors" as *;
+@use "sass:color";
+
+/* Elements partial */
+.action {
+  background-color: $primary;
+  color: $text;
+  font-family: $font-family;
+  font-size: $font-size-l;
+  padding: $pad-m $pad-l;
+  border-radius: $border-radius-s;
+
+  border: none;
+  cursor: pointer;
+}
+.action.danger {
+  background-color: $danger;
+}
+
+// Effects
+.action {
+  transition: background-color 0.3s ease;
+}
+.action:hover {
+  background-color: color.scale($primary, $lightness: -10%);
+}
+.action:focus,
+.action:active {
+  background-color: color.scale($primary, $lightness: -20%);
+}
+.action.danger:hover {
+  background-color: color.scale($danger, $lightness: -10%);
+}
+.action.danger:focus,
+.action.danger:active {
+  background-color: color.scale($danger, $lightness: -20%);
+}

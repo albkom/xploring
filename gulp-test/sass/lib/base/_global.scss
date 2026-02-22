@@ -1,0 +1,30 @@
+@use 'mixins' as mixins;
+@use "../variables/variables" as *;
+@use "../variables/colors" as *;
+
+// Shared global styles for both embedded and standalone versions of the app
+
+/* Global styles */
+html {
+  @include mixins.fullScreen;
+  background-color: red !important;
+}
+body {
+  @include mixins.fillContainer;
+  background-color: white !important;
+}
+
+/* Embedded app styles */
+.app {
+  @include mixins.fillContainer;
+  @include mixins.flex;
+  background-color: $background;
+  color: $text;
+  font-size: $font-size-m;
+  font-family: $font-family;
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+}

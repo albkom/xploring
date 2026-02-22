@@ -1,0 +1,46 @@
+@use "../lib" with (
+  // Typography
+  $font-family: "Roboto",
+  $font-size-s: 12px,
+  $font-size-m: 16px,
+  $font-size-l: 24px,
+  // Spacing
+  $pad-s: 0.5rem,
+  $pad-m: 1rem,
+  $pad-l: 2rem,
+  // Border
+  $border-radius-s: 0.3rem,
+  $border-radius-m: 0.5rem,
+  $border-radius-l: 1rem,
+  $border-width-s: 1px,
+  $border-width-m: 2px,
+  $border-width-l: 3px,
+  // Palette
+  $background: #f0f0f0,
+  $text: #333333,
+  $primary: #3498db,
+  $highlight: #e74c3c,
+  $danger: #e74c3c,
+  $error: #e74c3c,
+  $warning: #f39c12,
+  $success: #2ecc71,
+  // Tints and shades
+  $primary-1: #2980b9,
+  $primary-2: #5dade2,
+  $background-1: #ecf0f1,
+  $background-2: #bdc3c7,
+  $text-1: #2c3e50,
+  $text-2: #34495e,
+  $highlight-1: #c0392b,
+  $highlight-2: #e74c3c,
+  $danger-1: #c0392b,
+  $danger-2: #e74c3c,
+  $error-1: #c0392b,
+  $error-2: #e74c3c,
+  $warning-1: #d35400,
+  $warning-2: #f39c12,
+  $success-1: #27ae60,
+  $success-2: #2ecc71
+);
+
+// @use "customization" as *;

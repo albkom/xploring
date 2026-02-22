@@ -1,0 +1,59 @@
+@use 'sass:color';
+
+@mixin fullScreen {
+  min-width: 100dvw;
+  width: 100dvw;
+  max-width: 100dvw;
+  min-height: 100dvh;
+  height: 100dvh;
+  max-height: 100dvh;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin fillContainer {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin flex($direction: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin boxShadow($color, $size: $pad-s) {
+  box-shadow: inset 0 0 $size * 2 calc($size / 2) $color;
+}
+
+@mixin backgroundTransparent($color, $opacity: 0.8) {
+  background-color: rgba(
+    color.channel($color, "red", $space: rgb),
+    color.channel($color, "green", $space: rgb),
+    color.channel($color, "blue", $space: rgb),
+    $opacity
+  );
+}
+@mixin textShadow($color, $size: $pad-s) {
+  text-shadow: 0 0 $size $color;
+}
+
+
+@mixin border-gradient($color, $alt, $duration: 5s) {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, $color, $alt);
+}
+@mixin animation-rotating-gradient(
+  $color: $primary,
+  $alt: $background,
+  $duration: 5s
+) {
+  animation: border-gradient $duration linear infinite;
+}
